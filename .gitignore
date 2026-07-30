@@ -3,4 +3,6 @@ node_modules
 out
 .env*
 _reference_*/
+.pnpm-store/
+_previews/
 *.tsbuildinfo

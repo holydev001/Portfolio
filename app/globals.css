@@ -83,6 +83,22 @@
 
 .dark .grain::before { mix-blend-mode: screen; opacity: 0.04; }
 
+.ambient-field {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+  .ambient-field { opacity: 0.66; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-field { opacity: 0.48; }
+}
+
 @layer base {
   * {
     border-color: var(--color-border);

@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, useInView } from "motion/react";
 import { Github, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { AmbientField } from "./ambient-field";
 
 const zenitsuAvatar = "/pfp.png";
 const querycraftPreview = "/querycraft-preview.png";
@@ -141,18 +142,21 @@ export default function Portfolio() {
   }, [introDone]);
 
   return (
-    <div className="grain min-h-screen bg-background text-foreground md:cursor-none">
+    <div className="grain relative min-h-screen overflow-clip bg-background text-foreground md:cursor-none">
       <Cursor />
       <Intro onDone={() => setIntroDone(true)} />
-      <TopBar />
-      <Hero />
-      <Marquee />
-      <About />
-      <Work />
-      <Projects />
-      <Stack />
-      <Contact />
-      <Footer />
+      <AmbientField />
+      <div className="relative z-10">
+        <TopBar />
+        <Hero />
+        <Marquee />
+        <About />
+        <Work />
+        <Projects />
+        <Stack />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
