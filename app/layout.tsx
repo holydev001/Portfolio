@@ -3,13 +3,17 @@ import "./globals.css";
 
 const siteUrl = "https://holydev.cv";
 const siteName = "holy.dev";
-const siteTitle = "Priest | David Adams — Full-Stack Developer";
+const siteTitle = "David Adams (holydev) — Full-Stack Developer";
 const siteDescription =
-  "Portfolio of David Adams, also known as Priest(holydev) — a software developer in Nigeria building modern web applications with React, ReactNative, TanStack, Next.js, TypeScript, Python, Node.js etc.";
+  "Portfolio of David Adams, also known as Priest and holydev — a full-stack developer in Nigeria building thoughtful, performant web applications and digital products.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: siteTitle,
+  applicationName: siteName,
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
   description: siteDescription,
   keywords: [
     "Priest",
@@ -22,19 +26,38 @@ export const metadata: Metadata = {
     "TypeScript developer",
   ],
   authors: [{ name: "David Adams" }],
-  robots: { index: true, follow: true },
+  creator: "David Adams",
+  publisher: "David Adams",
+  category: "technology",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName,
+    locale: "en_US",
     title: siteTitle,
     description: siteDescription,
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1920,
+        height: 1080,
         alt: "Priest / David Adams — Holydev portfolio preview",
       },
     ],

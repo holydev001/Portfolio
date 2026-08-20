@@ -8,6 +8,9 @@ import { AmbientField } from "./ambient-field";
 const zenitsuAvatar = "/pfp.png";
 const querycraftPreview = "/querycraft-preview.png";
 const objekt404Preview = "/objekt-404.png";
+const kairoPreview = "/kairo-preview.png";
+const blueprintPortfolioPreview = "/portfolio-blueprint-preview.png";
+const threeDPortfolioPreview = "/portfolio-3d-preview.png";
 
 const NAV = [
   { label: "Index", id: "top" },
@@ -35,6 +38,7 @@ const PROJECTS = [
       "An interactive, drag-and-drop SQL query builder that lets you compose complex queries visually — no syntax memorization required. Built to make data exploration accessible for non-SQL users while still generating production-ready queries under the hood.",
     stack: ["Next.js", "TypeScript", "Tailwind", "React"],
     live: "https://visual-query-builder-ten.vercel.app/",
+    primaryLabel: "Live site",
     repo: "https://github.com/holydev001/visual-query-builder",
     year: "2025",
     image: querycraftPreview,
@@ -48,10 +52,54 @@ const PROJECTS = [
       "An experimental interactive artifact — a cinematic 3D object recovered from a future not yet rendered. Drag, scroll, and hover to manipulate the broadcast. Built as a love letter to brutalist web design and real-time 3D on the web.",
     stack: ["React", "Three.js", "TypeScript", "GSAP"],
     live: "https://objekt-404.vercel.app/",
+    primaryLabel: "Live site",
     repo: "https://github.com/holydev001/objekt-404",
     year: "2025",
     image: objekt404Preview,
     imageAlt: "OBJEKT//404 — cinematic 3D artifact landing page preview",
+  },
+  {
+    no: "03",
+    name: "Kairo",
+    tag: "Desktop Application",
+    description:
+      "A local-first daily journal and personal command center built around Kaizen. Set intentions, keep commitments, reflect each evening, and review your direction each week — all on your device.",
+    stack: ["Electron", "React", "TypeScript", "SQLite", "Zustand"],
+    live:
+      "https://github.com/holydev001/kairo/releases/download/v0.1.0-beta.11/Kairo-Setup-0.1.0-beta.11-x64.exe",
+    primaryLabel: "Download for Windows",
+    repo: "https://github.com/holydev001/kairo",
+    year: "2026",
+    image: kairoPreview,
+    imageAlt: "Kairo local-first personal command center for Windows",
+  },
+  {
+    no: "04",
+    name: "Blueprint Portfolio",
+    tag: "Portfolio Variation",
+    description:
+      "A responsive portfolio explored through a cool-toned blueprint grid, kinetic interface details, and crisp motion-led transitions.",
+    stack: ["Next.js", "React", "Tailwind", "Framer Motion"],
+    live: "https://holydev-sigma.vercel.app/",
+    primaryLabel: "Explore version",
+    repo: "https://github.com/holydev001/sub-port",
+    year: "2026",
+    image: blueprintPortfolioPreview,
+    imageAlt: "Blueprint-inspired holy.dev portfolio variation",
+  },
+  {
+    no: "05",
+    name: "3D Portfolio",
+    tag: "Portfolio Variation",
+    description:
+      "An immersive cosmic portfolio with an interactive Three.js hero, particle systems, orbiting geometry, and GSAP-powered motion.",
+    stack: ["Next.js", "Three.js", "React Three Fiber", "GSAP", "TypeScript"],
+    live: "https://3d-port-phi.vercel.app/",
+    primaryLabel: "Explore version",
+    repo: "https://github.com/holydev001/3d-port",
+    year: "2026",
+    image: threeDPortfolioPreview,
+    imageAlt: "Cosmic 3D holy.dev portfolio variation",
   },
 ];
 
@@ -960,15 +1008,15 @@ function Projects() {
         </>
       }
     >
-      <div className="col-span-12 grid grid-cols-1 gap-px bg-border md:grid-cols-2">
-        {PROJECTS.map((p) => (
+      <div className="col-span-12 grid grid-cols-1 gap-px bg-border md:grid-cols-2 lg:grid-cols-6">
+        {PROJECTS.map((p, index) => (
           <motion.article
             key={p.name}
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: [0.7, 0, 0.2, 1] }}
-            className="group relative flex flex-col gap-6 bg-background p-6 transition-colors hover:bg-paper md:p-10"
+            className={`group relative flex flex-col gap-6 bg-background p-6 transition-colors hover:bg-paper md:p-10 ${index < 2 ? "lg:col-span-3" : "lg:col-span-2"}`}
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -1033,7 +1081,7 @@ function Projects() {
                 data-cursor-label="Visit"
                 className="link-ink font-mono text-xs uppercase tracking-widest"
               >
-                → Live site
+                → {p.primaryLabel}
               </a>
               <a
                 href={p.repo}
