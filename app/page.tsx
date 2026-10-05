@@ -113,10 +113,10 @@ const WORK = [
     bullets: [
       "Built and maintained responsive healthcare product interfaces using Next.js, React, TypeScript, and Tailwind CSS.",
       "Converted Figma designs into reusable UI components and production pages for marketing, waitlist, lead-generation, FAQ, contact, legal, and account-deletion flows.",
-      "Integrated REST APIs and subscriber flows with FastAPI and MongoDB services while supporting deployment configuration, CORS, and production fixes.",
+      "Consumed REST APIs for waitlist and subscriber flows while supporting deployment configuration, CORS, and production fixes.",
       "Implemented technical SEO and conversion measurement across metadata, canonical URLs, Open Graph, sitemap, robots.txt, JSON-LD, PostHog, GA4, Meta Pixel, and event tracking.",
     ],
-    stack: ["Next.js", "React", "TypeScript", "Tailwind", "FastAPI", "MongoDB", "REST", "SEO", "PostHog", "GA4"],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "REST", "SEO", "PostHog", "GA4"],
   },
   {
     no: "02",

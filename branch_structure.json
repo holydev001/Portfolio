@@ -1,0 +1,33 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "archive/tanstack-main",
+    "experiment/pixel-assembly",
+    "feat/update-cv",
+    "fix/deployment-runtime",
+    "fix/upgrade-next-security",
+    "main",
+    "main-old",
+    "origin"
+  ],
+  "parent": {
+    "archive/tanstack-main": "main",
+    "experiment/pixel-assembly": "main",
+    "feat/update-cv": "main",
+    "fix/deployment-runtime": "main",
+    "fix/upgrade-next-security": "main",
+    "main": null,
+    "main-old": "main",
+    "origin": "main"
+  },
+  "order": [
+    "main",
+    "archive/tanstack-main",
+    "experiment/pixel-assembly",
+    "feat/update-cv",
+    "fix/deployment-runtime",
+    "fix/upgrade-next-security",
+    "main-old",
+    "origin"
+  ]
+}
