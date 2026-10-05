@@ -1,8 +1,8 @@
 node_modules
 .next
 out
-.env*
 _reference_*/
 .pnpm-store/
 _previews/
 *.tsbuildinfo
+config.bat
