@@ -106,57 +106,68 @@ const PROJECTS = [
 const WORK = [
   {
     no: "01",
-    role: "Lead Frontend Developer",
-    company: "Emerj LLC",
+    role: "Frontend Developer",
+    company: "ClinSight",
     location: "Remote",
-    period: "2025 — Present",
+    period: "2026 — Present",
     bullets: [
-      "Built an admin analytics dashboard tracking user activity, usage trends, and platform performance.",
-      "Shipped scalable frontend features in Next.js using modern React patterns.",
-      "Integrated backend APIs for real-time and historical data visualization.",
-      "Drove code reviews, sprint planning, and iterative product improvements.",
+      "Built and maintained responsive healthcare product interfaces using Next.js, React, TypeScript, and Tailwind CSS.",
+      "Converted Figma designs into reusable UI components and production pages for marketing, waitlist, lead-generation, FAQ, contact, legal, and account-deletion flows.",
+      "Integrated REST APIs and subscriber flows with FastAPI and MongoDB services while supporting deployment configuration, CORS, and production fixes.",
+      "Implemented technical SEO and conversion measurement across metadata, canonical URLs, Open Graph, sitemap, robots.txt, JSON-LD, PostHog, GA4, Meta Pixel, and event tracking.",
     ],
-    stack: ["Next.js", "TypeScript", "Tailwind", "REST"],
+    stack: ["Next.js", "React", "TypeScript", "Tailwind", "FastAPI", "MongoDB", "REST", "SEO", "PostHog", "GA4"],
   },
   {
     no: "02",
-    role: "Fullstack Engineer",
+    role: "Full-Stack Developer",
     company: "Nexus Haven",
     location: "Remote",
     period: "2026",
     bullets: [
       "Shipped an immersive, scroll-driven 3D landing experience for a VR meetings platform.",
-      "Performance pass on the 3D scene: memoized particle buffers, capped DPR, high-performance GL context, and suspense-gated GLB preloading.",
-      "Engineered an async FastAPI backend for the Nexus waitlist, maximizing registration throughput while keeping API latency low.",
-      "Designed a MongoDB schema with indexing and connection pooling for fast, stable reads during peak traffic.",
+      "Improved 3D performance by memoizing particle buffers, capping device pixel ratio, using a high-performance WebGL context, and gating GLB preloading.",
+      "Engineered an async FastAPI backend for product waitlist registration and designed indexed MongoDB reads with connection pooling.",
     ],
     stack: ["TanStack Start", "Three.js", "FastAPI", "MongoDB", "GSAP", "Tailwind"],
   },
   {
     no: "03",
-    role: "Web Developer",
+    role: "Frontend Developer",
+    company: "Emerj LLC",
+    location: "Remote",
+    period: "2025 — 2026",
+    bullets: [
+      "Built an admin analytics dashboard tracking user activity, usage trends, and platform performance.",
+      "Shipped scalable frontend features using Next.js, TypeScript, and modern React patterns.",
+      "Integrated backend APIs to support real-time and historical data visualization and drove code reviews and sprint planning.",
+    ],
+    stack: ["Next.js", "TypeScript", "Tailwind", "REST"],
+  },
+  {
+    no: "04",
+    role: "Frontend Developer",
     company: "Content Q",
     location: "Remote",
     period: "2025",
     bullets: [
-      "Led frontend of a production marketing site in Next.js.",
-      "Coordinated frontend execution, timelines, and delivery.",
-      "Built high-performance landing pages tuned for SEO and responsiveness.",
-      "Implemented a waitlist system with reliable backend sync.",
+      "Led frontend development of a production-ready marketing website using Next.js and React.",
+      "Built responsive landing and content pages with a focus on performance, accessibility, and technical SEO.",
+      "Implemented a waitlist system and reliable data synchronization with backend services.",
     ],
     stack: ["Next.js", "React", "Tailwind", "SEO"],
   },
   {
-    no: "04",
-    role: "Intern / Junior Developer",
-    company: "HNG",
+    no: "05",
+    role: "Frontend Developer Intern",
+    company: "HNG Internship",
     location: "Remote",
     period: "2025",
     bullets: [
-      "Contributed to real-world projects in an agile cross-functional team.",
-      "Implemented features, fixed bugs, and shipped through Git pull-request workflows.",
+      "Contributed to real-world software projects in an agile, cross-functional team environment.",
+      "Implemented assigned features, fixed bugs, and collaborated through Git-based workflows and pull requests.",
     ],
-    stack: ["Git", "Agile", "React"],
+    stack: ["Git", "React", "React Native", "Vue", "Next.js"],
   },
 ];
 
@@ -615,8 +626,8 @@ function Hero() {
           <div className="hidden h-px w-full bg-border md:block" />
 
           <p className="hidden max-w-[28ch] text-sm leading-relaxed text-muted-foreground md:block">
-            Currently shaping admin analytics & data visualization tools at{" "}
-            <em className="font-display not-italic">Emerj LLC</em>.
+            Currently shipping immersive 3D product experiences at{" "}
+            <em className="font-display not-italic">Nexus Haven</em>.
           </p>
         </motion.div>
 
@@ -878,7 +889,7 @@ function About() {
           className="mt-12 grid grid-cols-2 gap-6 border-t border-rule pt-6 font-mono text-xs uppercase tracking-widest md:grid-cols-4"
         >
           <Stat k="3+" v="Years building" />
-          <Stat k="4" v="Production teams" />
+          <Stat k="5" v="Teams and products" />
           <Stat k="∞" v="PR reviews" />
           <Stat k="01" v="Time zone (WAT)" />
         </motion.div>
